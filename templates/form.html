@@ -1,0 +1,69 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Анализ зоны обзора</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        form {
+            margin-bottom: 2rem;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        input {
+            padding: 0.5rem;
+            width: 200px;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+        }
+
+        .message {
+            margin-top: 1rem;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<h1>Анализ зоны видимости станции</h1>
+<form method="post" action="/analyze">
+    <label>X координата:
+        <input type="number" name="x" required>
+    </label>
+    <label>Y координата:
+        <input type="number" name="y" required>
+    </label>
+    <label>Высота станции (м):
+        <input type="number" step="0.1" name="height" required>
+    </label>
+    <label>Радиус обзора (ячейки):
+        <input type="number" name="r" required>
+    </label>
+    <button type="submit">Анализировать</button>
+</form>
+
+{% if message %}
+<div class="message">{{ message }}</div>
+
+    {% if geojson_url %}
+    <p><a href="{{ geojson_url }}" target="_blank">Скачать результат (GeoJSON)</a></p>
+    {% endif %}
+
+    {% if png_url %}
+    <p><a href="{{ png_url }}" target="_blank">Посмотреть изображение</a></p>
+    {% endif %}
+
+{% endif %}
+</body>
+</html>

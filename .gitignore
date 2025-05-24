@@ -1,0 +1,62 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Poetry
+poetry.lock
+
+# Environment variables
+.env
+.env.*
+
+# VS Code settings
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Static files (auto-generated)
+static/*.geojson
+static/*.png
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# MacOS / Windows / Linux system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# PyCharm
+.idea/
+
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
