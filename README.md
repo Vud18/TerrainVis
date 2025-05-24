@@ -51,7 +51,7 @@ pip install -r requirements.txt
 1. Запустите приложение с помощью Uvicorn:
 ```bash
 
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
 
 ## 🗂️ Структура проекта
